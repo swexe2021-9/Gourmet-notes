@@ -1,0 +1,2 @@
+class Kodawari < ApplicationRecord
+end
