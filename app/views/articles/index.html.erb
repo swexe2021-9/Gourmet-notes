@@ -1,0 +1,9 @@
+<% if flash[:notice] %>
+   <%= flash[:notice] %>
+<% end %>
+
+<% @articles.each do |article| %>
+  <p><%= article.title %></p>
+  <%= link_to '編集', "/article/#{article.id}/edit" %>
+  <%= link_to '削除', "/article/#{article.id}", method: :delete %>
+<% end %>
