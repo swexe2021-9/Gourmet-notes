@@ -1,0 +1,19 @@
+<%= form_with model: @article, url: {action: :update} do |f| %>
+  <p>
+  <%= f.hidden_field :store_id, :value => @store.id %>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  </p>
+  <p><%= f.label :title, 'タイトル' %>
+  <%= f.text_field :title %></p>
+  <p>店舗名:<%= @store.name %></p>
+  <p>住所:<%= @store.adress %></p>
+  <p><%= f.label :intro, 'お店の紹介' %>
+  <%= f.text_area :intro %></p>
+  <p><%= f.label :kodawari, 'こだわり' %>
+  <%= f.text_area :kodawari %></p>
+  <p><%= f.label :mood, '雰囲気' %>
+  <%= f.text_area :mood %></p>
+  <p><%= f.label :kuchikomi, '口コミ' %>
+  <%= f.text_area :kuchikomi %></p>
+  <p><%= f.submit '更新する' %></p>
+<% end %>
