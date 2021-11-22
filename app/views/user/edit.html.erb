@@ -1,0 +1,9 @@
+<%= form_for @user, url: {action: :update} do |f| %>
+  <%= f.label :email, 'email' %> 
+  <%= f.text_field :email %> 
+  <%= f.label :pass, 'pass' %> 
+  <%= f.password_field :pass %> 
+  <%= f.label :belong, 'belong' %> 
+  <%= f.text_field :belong %> 
+  <%= f.submit '登録' %>
+<% end %>
