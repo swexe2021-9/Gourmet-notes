@@ -6,9 +6,10 @@ class UserController < ApplicationController
         @user = User.new
     end
     def create
-        @user = User.new(email: params[:user][:email], pass: params[:user][:pass], belong: params[:user][:belong])
+        pass = BCrypt::Password.create(params[:user][:pass])
+        @user = User.new(email: params[:user][:email], pass: pass, belong: params[:user][:belong])
         if @user.save
-            redirect_to '/top/login_form'
+            redirect_to '/top/main'
         else
             render 'new'
         end
