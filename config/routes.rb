@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    resources :user, :article, :store
+    resources :user, :articles, :store
     root 'top#main'
     get 'top/main', to: 'top#main'
     post 'top/login'

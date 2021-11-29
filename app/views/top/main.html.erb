@@ -1,10 +1,14 @@
-<% if current_user %>
-  <%= "#{current_user.email}さんログイン中" %>
+<% if flash[:notice] %>
+   <p><%= flash[:notice] %></p>
+<% end %>
+
+<% if session[:login_uid] %>
+  <%= "#{session[:login_uid]}さんログイン中" %>
 <% end %>
 
 <%= image_tag '' %>
 
 <p><%= link_to '記事を書く', '/articles/menu' %>
-<%= link_to '記事を見る', '/article' %></p>
+<%= link_to '記事を見る', '/articles' %></p>
 
 <%= image_tag '' %>

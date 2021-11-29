@@ -11,8 +11,8 @@ class TopController < ApplicationController
       user = User.find_by(email: params[:email])
       if user and BCrypt::Password.new(user.pass) == params[:pass]
           flash[:notice] = 'ログインに成功しました。'
-          session[:login_uid] = user.id
-          redirect_to root_path
+          session[:login_uid] = user.email
+          redirect_to '/top/main'
       else
           flash[:notice] = 'ログインに失敗しました。'
           render 'login_form'

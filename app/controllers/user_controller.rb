@@ -20,11 +20,11 @@ class UserController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(email: params[:user][:email], pass: params[:user][:pass], belong: params[:user][:belong])
-        redirect_to '/users'
+        redirect_to '/user'
     end
     def destroy
         user = User.find(params[:id])
         user.destroy
-        redirect_to '/users'
+        redirect_to '/user'
     end
 end
