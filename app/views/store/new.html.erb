@@ -1,0 +1,20 @@
+<% if @article.errors.present? %>
+<h3> エラーがあります</h3>
+<ul>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @article, url: {action: :create} do |f| %>
+  <%= f.label :name, 'name' %> 
+  <%= f.text_field :name %> 
+  <%= f.label :address, 'address' %> 
+  <%= f.password_field :address %> 
+  <%= f.label :category_1, 'category_1' %> 
+  <%= f.text_field :category_1 %> 
+  <%= f.label :category_2, 'category_2' %> 
+  <%= f.text_field :category_2 %>
+  <%= f.submit '登録' %>
+<% end %>
