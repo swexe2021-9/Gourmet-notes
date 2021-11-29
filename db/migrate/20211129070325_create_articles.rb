@@ -7,7 +7,7 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :intro
       t.string :kodawari
       t.string :mood
-      t.string :kuchikomi
+      t.string :review
 
       t.timestamps
     end

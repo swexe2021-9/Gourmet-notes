@@ -7,7 +7,7 @@ one:
   intro: MyString
   kodawari: MyString
   mood: MyString
-  kuchikomi: MyString
+  review: MyString
 
 two:
   title: MyString
@@ -16,4 +16,4 @@ two:
   intro: MyString
   kodawari: MyString
   mood: MyString
-  kuchikomi: MyString
+  review: MyString

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_15_072106) do
+ActiveRecord::Schema.define(version: 2021_11_29_070325) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2021_11_15_072106) do
     t.string "intro"
     t.string "kodawari"
     t.string "mood"
-    t.string "kuchikomi"
+    t.string "review"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,12 +33,14 @@ ActiveRecord::Schema.define(version: 2021_11_15_072106) do
 
   create_table "comments", force: :cascade do |t|
     t.string "message"
+    t.integer "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "kodawaris", force: :cascade do |t|
-    t.string "name"
+    t.string "content"
+    t.integer "store_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
