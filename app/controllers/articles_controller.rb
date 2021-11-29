@@ -20,11 +20,11 @@ class ArticlesController < ApplicationController
     end
     
     def edit
-      @article = Article.find(params[:user_id])   
+      @article = Article.find(params[:id])   
     end
     
     def update
-      @article = Article.find(params[:user_id])
+      @article = Article.find(params[:id])
       @article.update(title: params[:article][:title], user_id: params[:article][:user_id], store_id: params[:article][:store_id],
                       intro: params[:article][:intro], kodawari: params[:article][:kodawari], mood: params[:article][:mood],
                       kuchikomi: params[:article][:kuchikomi])
@@ -32,8 +32,12 @@ class ArticlesController < ApplicationController
     end
     
     def destroy
-      article = Article.find(params[:user_id])
+      article = Article.find(params[:id])
       article.destroy
       redirect_to root_path  
+    end
+    
+    def show
+      @article = Article.find(params[:id])
     end
 end
