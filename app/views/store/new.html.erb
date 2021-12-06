@@ -1,13 +1,13 @@
-<% if @article.errors.present? %>
+<% if @store.errors.present? %>
 <h3> エラーがあります</h3>
 <ul>
-    <% @article.errors.full_messages.each do |msg| %>
+    <% @store.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
 </ul>
 <% end %>
 
-<%= form_for @article, url: {action: :create} do |f| %>
+<%= form_for @store, url: {action: :create} do |f| %>
   <%= f.label :name, 'name' %> 
   <%= f.text_field :name %> 
   <%= f.label :address, 'address' %> 

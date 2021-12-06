@@ -7,6 +7,10 @@ class TopController < ApplicationController
       end
     end
     
+    def menu
+      render 'menu'
+    end
+    
     def login
       user = User.find_by(email: params[:email])
       if user and BCrypt::Password.new(user.pass) == params[:pass]
