@@ -5,6 +5,7 @@
     <%= e.category_1 %>
     <%= e.category_2 %>
     <%= link_to '削除', store_path(e), method: :delete %>
+    <%= link_to 'この店舗の記事を書く', new_article_path(store_id: e.id) %>
     </p>
 <% end %>
 
@@ -13,5 +14,5 @@
 </p>
 
 <p>
-  <%= link_to '店舗一覧', articles_path %>
+  <%= link_to '記事一覧', articles_path %>
 </p>

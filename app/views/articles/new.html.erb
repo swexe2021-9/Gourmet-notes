@@ -6,14 +6,14 @@
   <p><%= f.label :title, 'タイトル' %>
   <%= f.text_field :title %></p>
   <p>店舗名:<%= @store.name %></p>
-  <p>住所:<%= @store.adress %></p>
+  <p>住所:<%= @store.address %></p>
   <p><%= f.label :intro, 'お店の紹介' %>
   <%= f.text_area :intro %></p>
   <p><%= f.label :kodawari, 'こだわり' %>
   <%= f.text_area :kodawari %></p>
   <p><%= f.label :mood, '雰囲気' %>
   <%= f.text_area :mood %></p>
-  <p><%= f.label :kuchikomi, '口コミ' %>
-  <%= f.text_area :kuchikomi %></p>
+  <p><%= f.label :review, 'レビュー' %>
+  <%= f.text_area :review %></p>
   <p><%= f.submit '作成する' %></p>
 <% end %>

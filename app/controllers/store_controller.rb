@@ -6,7 +6,7 @@ class StoreController < ApplicationController
        @store = Store.new
     end
     def create
-       @store = Store.new(name: params[:store][:name], adress: params[:store][:adress], category_1: [:store][:category_1], category_2: [:store][:category_2])
+       @store = Store.new(name: params[:store][:name], address: params[:store][:address], category_1: params[:store][:category_1], category_2: params[:store][:category_2])
        @store.save
        redirect_to '/store'
     end
@@ -14,7 +14,7 @@ class StoreController < ApplicationController
        @store = Store.find(params[:id])
     end
     def update
-       @store = Store.update(name: params[:store][:name], adress: params[:store][:adress], category_1: [:store][:category_1], category_2: [:store][:category_2])
+       @store = Store.update(name: params[:store][:name], address: params[:store][:address], category_1: [:store][:category_1], category_2: [:store][:category_2])
        redirect_to '/store'
     end
     def destroy
