@@ -1,9 +1,13 @@
+<%= image_tag "logo.png" %><br>
+
 <% if flash[:notice] %>
    <%= flash[:notice] %>
 <% end %>
 
-<% @articles.each do |article| %>
-  <p><%= article.title %></p>
-  <%= link_to '編集', "/articles/#{article.id}/edit" %>
-  <%= link_to '削除', "/articles/#{article.id}", method: :delete %>
-<% end %>
+<div class="box">
+    <% @articles.each do |article| %>
+      <p><%= article.title %></p>
+      <%= link_to '編集', "/articles/#{article.id}/edit" %>
+      <%= link_to '削除', "/articles/#{article.id}", method: :delete %>
+    <% end %>
+</div>

@@ -1,13 +1,17 @@
-<% @stores.each do |e| %>
-  <p>
-    <%= e.name %>
-    <%= e.address %>
-    <%= e.category_1 %>
-    <%= e.category_2 %>
-    <%= link_to '削除', store_path(e), method: :delete %>
-    <%= link_to 'この店舗の記事を書く', new_article_path(store_id: e.id) %>
-    </p>
-<% end %>
+<%= image_tag "logo.png" %><br>
+
+<div class="box">
+  <% @stores.each do |e| %>
+    <p>
+      <%= e.name %>
+      <%= e.address %>
+      <%= e.category_1 %>
+      <%= e.category_2 %>
+      <%= link_to '削除', store_path(e), method: :delete %>
+      <%= link_to 'この店舗の記事を書く', new_article_path(store_id: e.id) %>
+      </p>
+  <% end %>
+</div>
 
 <p>
   <%= link_to '新規店舗追加', new_store_path %>

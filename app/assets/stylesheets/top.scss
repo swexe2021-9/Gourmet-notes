@@ -1,3 +1,83 @@
-// Place all the styles related to the Top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html,body {
+  background-color: white;
+  font-family: "Hannari", serif;
+  font-size: 20px;
+  color: #734e30;
+}
+
+a {
+    text-decoration:none; 
+}
+
+.Button-style {
+  font-size: 30px;
+  display: inline-block;
+  background: #ffffff;
+  color: #cc99ff;
+  width: 200px;
+  height: 200px;
+  border: double 4px #cc99ff;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Button-style:hover {
+    font-size: 30px;
+    display: inline-block;
+    background: #ecd9ff;
+    color: #ffffff;
+    width: 200px;
+    height: 200px;
+    border: double 4px #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.logout {
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #d9eaff;
+  border: double 4px #d9eaff;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.logout:hover {
+  font-size: 18px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #d9eaff;
+  border: double 4px #ffffff;
+  background-color: #d9eaff;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.img {
+    width: 70%;
+    height: 70%;
+}
