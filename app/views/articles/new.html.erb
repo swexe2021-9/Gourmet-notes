@@ -1,3 +1,5 @@
+<%= image_tag "logo.png" %><br>
+
 <%= form_with model: @article, url: {action: :create} do |f| %>
   <p>
   <%= f.hidden_field :store_id, :value => @store.id %>
