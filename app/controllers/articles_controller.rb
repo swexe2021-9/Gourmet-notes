@@ -20,18 +20,6 @@ class ArticlesController < ApplicationController
       end  
     end
     
-    def edit
-      @article = Article.find(params[:id])
-    end
-    
-    def update
-      @article = Article.find(params[:id])
-      @article.update(title: params[:article][:title], user_id: params[:article][:user_id], store_id: params[:article][:store_id],
-                      intro: params[:article][:intro], kodawari: params[:article][:kodawari], mood: params[:article][:mood],
-                      review: params[:article][:review])
-      redirect_to root_path  
-    end
-    
     def destroy
       article = Article.find(params[:id])
       article.destroy
