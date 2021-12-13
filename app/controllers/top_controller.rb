@@ -28,32 +28,4 @@ class TopController < ApplicationController
       session.delete(:login_uid)
       redirect_to root_path
     end
-    
-    def form
-      render 'search_form'
-    end
-    
-    def search
-      @model = params["model"]
-      @content = params["content"]
-      @method = params["method"]
-      @records = search_for(@model, @content, @method)
-    end
-    
-    private
-    def search_for(model, content, method)
-      if model == 'store'
-        if method == 'perfect'
-          Store.where(name: content)
-        else
-          Store.where('name LIKE ?', '%'+content+'%')
-        end
-      elsif model == 'article'
-        if method == 'perfect'
-          Article.where(title: content)
-        else
-          Article.where('title LIKE ?', '%'+content+'%')
-        end
-      end
-    end
 end
