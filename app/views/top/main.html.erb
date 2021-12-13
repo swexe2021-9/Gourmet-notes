@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP|Open+Sans&display=swap" rel="stylesheet">
+    </head>
+    
+
+<%= image_tag "logo.png" %><br>
+
+<div class="box">
+　<p>
+ 　 <a><button class="Button-style"><%= link_to '記事を書く', '/top/menu' %></button></a>
+　  <a><button class="Button-style"><%= link_to '記事を見る', '/articles' %></button></a>
+　</p>
+</div>
+
+<%= image_tag '' %>
+
 <% if flash[:notice] %>
    <p><%= flash[:notice] %></p>
 <% end %>
@@ -6,11 +26,6 @@
   <%= "#{session[:login_uid]}さんログイン中" %>
 <% end %>
 
-<%= image_tag '' %>
+<br><button class="logout"><%= link_to 'ログアウト', top_logout_path %></button>
 
-<p><%= link_to '記事を書く', '/top/menu' %>
-<%= link_to '記事を見る', '/articles' %></p>
-
-<%= image_tag '' %>
-
-<%= link_to 'ログアウト', top_logout_path %>
+</html>
